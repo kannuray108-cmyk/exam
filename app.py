@@ -49,6 +49,7 @@ if uploaded_file and st.button("🚀 MCQs बनाएं", type="primary"):
     else:
         try:
             genai.configure(api_key=api_key)
+            # यहाँ gemini-2.5-flash कर दिया गया है ताकि 404 एरर न आए
             model = genai.GenerativeModel('gemini-2.5-flash')
             file_type = uploaded_file.name.split(".")[-1].lower()
             
